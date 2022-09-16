@@ -5491,11 +5491,50 @@ window.__require = function t(e, o, n) {
                     o.gameConfigData.baseConfigData = t, 0 == --p && (e(), n.adaptCacheData())
                 })
             }, t.registerUserData = function() {
-                if (!cc.sys.localStorage.getItem(this.localKeyName)) {
-                    this.gameUserLocalData = this.registerData, u.default.isPlatform(u.Platform.android) ? s.default.loginInfo && s.default.loginInfo.userId ? this.gameUserLocalData.userData.userID = s.default.loginInfo.userId : this.gameUserLocalData.userData.userID = r.default.randomCharNum() : u.default.isPlatform(u.Platform.tt) ? this.gameUserLocalData.userData.userID = "" : u.default.isPlatform(u.Platform.wx) ? this.gameUserLocalData.userData.userID = "" : u.default.isPlatform(u.Platform.web) ? (this.gameUserLocalData.userData.userID = "100001", this.gameUserLocalData.userData.token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAwMjA0MDIsIm5iZiI6MTY1ODkxODIwMiwiaWF0IjoxNjU4OTE2NDAyLCJqdGkiOiJDTTpjYXRfbWF0Y2g6bHQxMjM0NTYiLCJvcGVuX2lkIjoiIiwidWlkIjoxMDAwMDEsImRlYnVnIjoiIiwibGFuZyI6IiJ9.NQZAWBLYtq6hBff9YjNcaI2Soa6Z5vwbIU7YnjP1KBQ") : u.default.isPlatform(u.Platform.oppo) ? this.gameUserLocalData.userData.userID = "" : u.default.isPlatform(u.Platform.vivo) ? this.gameUserLocalData.userData.userID = "" : this.gameUserLocalData.userData.userID = r.default.randomCharNum(), this.gameUserLocalData.userData.registerTime = Date.now() + "";
-                    var t = JSON.stringify(this.gameUserLocalData);
-                    cc.sys.localStorage.setItem(this.localKeyName, t), console.log("[PUSH] \u6ce8\u518c\u7528\u6237 ###### " + t), a.default.getInstance().register = !0
-                }
+				if (!cc.sys.localStorage.getItem(this.localKeyName)) {
+
+					this.gameUserLocalData = this.registerData;
+
+					if (u.default.isPlatform(u.Platform.android)) {
+						if (s.default.loginInfo && s.default.loginInfo.userId) {
+							this.gameUserLocalData.userData.userID = s.default.loginInfo.userId;
+						  } else {
+							this.gameUserLocalData.userData.userID = r.default.randomCharNum();
+						  }
+					} else {
+						if (u.default.isPlatform(u.Platform.tt)) {
+							this.gameUserLocalData.userData.userID = "";
+						  } else {
+							if (u.default.isPlatform(u.Platform.wx)) {
+							  this.gameUserLocalData.userData.userID = "";
+							} else {
+							  if (u.default.isPlatform(u.Platform.web)) {
+								{
+								  this.gameUserLocalData.userData.userID = "100001";
+								  this.gameUserLocalData.userData.token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTQzNjA5NTEsIm5iZiI6MTY2MzI1ODc1MSwiaWF0IjoxNjYzMjU2OTUxLCJqdGkiOiJDTTpjYXRfbWF0Y2g6bHQxMjM0NTYiLCJvcGVuX2lkIjoiIiwidWlkIjo3NTU1NTYxNCwiZGVidWciOiIiLCJsYW5nIjoiIn0.3AimpJy7Jnf1ZGHaZr3qdPvE5foeZy4-_VJLDHthYR8";
+								}
+							  } else {
+								if (u.default.isPlatform(u.Platform.oppo)) {
+								  this.gameUserLocalData.userData.userID = "";
+								} else {
+								  if (u.default.isPlatform(u.Platform.vivo)) {
+									this.gameUserLocalData.userData.userID = "";
+								  } else {
+									this.gameUserLocalData.userData.userID = r.default.randomCharNum();
+								  }
+								}
+							  }
+							}
+						  }
+					}
+
+					this.gameUserLocalData.userData.registerTime = Date.now() + "";
+
+					var t = JSON.stringify(this.gameUserLocalData);
+					cc.sys.localStorage.setItem(this.localKeyName, t);
+					console.log("[PUSH] 注册用户 ###### " + t);
+					a.default.getInstance().register = !0;
+				}
             }, t.removeUserData = function() {
                 cc.sys.localStorage.getItem(this.localKeyName) && (cc.sys.localStorage.clear(), console.log("\u79fb\u9664\u672c\u5730\u7f13\u5b58 ### "))
             }, t.isLogin = function() {
