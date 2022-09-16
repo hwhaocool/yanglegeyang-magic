@@ -7841,6 +7841,10 @@ window.__require = function t(e, o, n) {
 								this.setGameLayerUiData();
 								d.default.getInstance().levelWinDict.random += 1;
 							  }
+
+							  //这里扣减道具数量，
+							  //注释掉就是道具数量不减少
+							  // 改为+1 就是越用越多
 							  var o = this.userData.prop_random - 1;
 							  o < 0 && (o = 0);
 							}
