@@ -3,6 +3,8 @@
 
 ## 功能
 
+![效果图](./pic/overview.png)
+
 1. 去广告  
 [george-jiang-wow](https://github.com/george-jiang-wow/yanglegeyang)实现的
 2. 快速通关  
