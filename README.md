@@ -1,5 +1,5 @@
 # yanglegeyang
-羊了个羊在线版
+羊了个羊在线版, fork 自 [george-jiang-wow](https://github.com/george-jiang-wow/yanglegeyang)
 
 ## 功能
 
