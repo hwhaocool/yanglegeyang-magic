@@ -7744,7 +7744,7 @@ window.__require = function t(e, o, n) {
 					
 					this.userData = c.default.getUserData();
 					this.userData.prop_cancel = 100;
-					this.userData.prop_random = 100;
+					this.userData.prop_random = 500;
 					this.userData.prop_remove = 100;
 					c.default.saveUserData(this.userData);
 
