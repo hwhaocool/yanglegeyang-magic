@@ -5511,7 +5511,8 @@ window.__require = function t(e, o, n) {
 							  if (u.default.isPlatform(u.Platform.web)) {
 								{
 								  this.gameUserLocalData.userData.userID = "100001";
-								  this.gameUserLocalData.userData.token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTQzNjA5NTEsIm5iZiI6MTY2MzI1ODc1MSwiaWF0IjoxNjYzMjU2OTUxLCJqdGkiOiJDTTpjYXRfbWF0Y2g6bHQxMjM0NTYiLCJvcGVuX2lkIjoiIiwidWlkIjo3NTU1NTYxNCwiZGVidWciOiIiLCJsYW5nIjoiIn0.3AimpJy7Jnf1ZGHaZr3qdPvE5foeZy4-_VJLDHthYR8";
+                                  // token 在这里
+								  this.gameUserLocalData.userData.token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTQzNTg3MTQsIm5iZiI6MTY2MzI1NjUxNCwiaWF0IjoxNjYzMjU0NzE0LCJqdGkiOiJDTTpjYXRfbWF0Y2g6bHQxMjM0NTYiLCJvcGVuX2lkIjoiIiwidWlkIjo4Njk3Mzk2NiwiZGVidWciOiIiLCJsYW5nIjoiIn0.rMgzoKHWRSPo30bIA0VFIcQ05y5JX5pWd3QFONSti9s";
 								}
 							  } else {
 								if (u.default.isPlatform(u.Platform.oppo)) {
