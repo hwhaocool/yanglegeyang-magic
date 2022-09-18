@@ -7745,6 +7745,7 @@ window.__require = function t(e, o, n) {
 					
 					this.userData = c.default.getUserData();
 					this.userData.prop_cancel = 100;
+                    // 随机道具个数
 					this.userData.prop_random = 500;
 					this.userData.prop_remove = 100;
 					c.default.saveUserData(this.userData);
@@ -11257,7 +11258,9 @@ window.__require = function t(e, o, n) {
                         showPopData: {}
                     })
                 }, e.prototype.beginGameStatus = function() {
-                    var t = v.default.todayIsWin();
+                    // var t = v.default.todayIsWin();
+                    // 设置为-1，去掉每日一关的限制
+                    var t = -1;
                     if (h.default.getInstance().todayState = t, console.log("state = ", t), d.default.reportTACommon("game_start", {
                             type: "\u6bcf\u65e5\u6311\u6218"
                         }), h.default.getInstance().unLimitVideo = !0, -1 == t) this.gotoGame();
